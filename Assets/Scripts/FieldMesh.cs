@@ -7,6 +7,12 @@ using UnityEngine;
 public class FieldMesh : MonoBehaviour
 {
 
+<<<<<<< Updated upstream
+=======
+    static Color color1 = new Color(1f, 0f, 0f);
+    static Color color2 = new Color(0f, 1f, 0f);
+    static Color color3 = new Color(0f, 0f, 1f);
+>>>>>>> Stashed changes
     private Mesh _fieldMesh;
     private MeshCollider _meshCollider;
     private MeshFilter _filter;

@@ -150,8 +150,20 @@ public class FieldGenerator : MonoBehaviour
                 _ => throw new ArgumentException("wrong hex type")
             };
             vertices.First(v => v.tX == hexCenter.tX && v.tZ == hexCenter.tZ).position.y = height;
+<<<<<<< Updated upstream
             //Debug.Log(hexCenter.ToString());
             for (int d = 1; d < Metrics.hexSize; d++)
+=======
+
+            int typeNumber = hex.textureType;
+            int textureindex = vertices.IndexOf(hexCenter);
+            texturevector.x = texturevector.z = texturevector.y = typeNumber;
+            texturelist[textureindex] = texturevector;
+
+            Debug.Log(hexCenter.ToString());
+
+            for (int d = 1; d <= Metrics.hexSize; d++)
+>>>>>>> Stashed changes
             {
                 var neighbours = vertices.Where(v => v.DiscreteDistance(hexCenter) == d);
                 foreach (var n in neighbours)
